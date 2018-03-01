@@ -22,9 +22,9 @@ class App(QWidget):
             ctrl = 130
             bank = 0
             csum = 45
-            status = 'ON'
+            status = 'OFF'
 
-        if status == 'ON':
+        elif status == 'ON':
             # If the switch is ON, turn it OFF!
             api1 = 170
             api2 = 3
@@ -32,7 +32,7 @@ class App(QWidget):
             ctrl = 129
             bank = 0
             csum = 44
-            status = 'OFF'
+            status = 'ON'
 
         tx = [api1, api2, api3, ctrl, bank, csum]
         print(tx)
