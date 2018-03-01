@@ -1,8 +1,26 @@
 import sys
 import serial
-from PyQt5 import QtCore, QtGui, uic, QtWidgets
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton
+from PyQt5.uic import loadUi
 
 
+class App(QWidget):
+    def __init__(self):
+        super(App, self).__init__()
+        loadUi('OnOff_RPi_backend.ui', self)
+        self.setWindowTitle('On & Off Fault Control')
+
+    def on_btn_click(self):
+        self.on_btn_clicked.connect(self.all_on)
+        print("ON")
+
+    def off_btn_click(self):
+        self.off_btn_clicked.connect(self.all_off)
+        print("OFF")
+
+
+@pyqtSlot()
 def all_on():
     api1 = 170
     api2 = 3
@@ -12,6 +30,7 @@ def all_on():
     csum = 45
 
     tx = [api1, api2, api3, ctrl, bank, csum]
+    print(tx)
 
     # Establish USB Virtual Serial Connection
     ser = serial.Serial(
@@ -35,6 +54,7 @@ def all_off():
     csum = 44
 
     tx = [api1, api2, api3, ctrl, bank, csum]
+    print(tx)
 
     # Establish USB Virtual Serial Connection
     ser = serial.Serial(
@@ -49,26 +69,7 @@ def all_off():
     ser.write(serial.to_bytes(tx))
 
 
-form_class = uic.loadUiType("OnOff_RPi_backend.ui")[0]
-
-
-class MyWindowClass(QtGui.QMainWindow, form_class):
-    def __init__(self, parent=None):
-        QtGui.QMainWindow.__init__(self, parent)
-        self.setupUi(self)
-        self.on_btn.clicked.connect(self.on_button_clicked)
-        self.off_btn.clicked.connect(self.off_button_clicked)
-
-    def on_btn_clicked(self):
-        all_on()
-        self.on_btn.clicked()
-
-    def off_btn_clicked(self):
-        all_off()
-        self.off_btn.clicked()
-
-
-app = QtGui.QApplication(sys.argv)
-myWindow = MyWindowClass()
-myWindow.show()
-app.exec_()
+app = QApplication(sys.argv)
+widget = App()
+widget.show()
+sys.exit(app.exec_())
