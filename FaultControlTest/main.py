@@ -1,6 +1,6 @@
 import sys
 import serial
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.uic import loadUi
 
@@ -9,12 +9,11 @@ class App(QWidget):
     def __init__(self):
         super(App, self).__init__()
         loadUi('FaultControlTest_v1.0.ui', self)
-        self.on_off_btn.clicked.connect(self.on_off_btn_click)
+        self.on_off_btn.stateChanged.connect(self.on_off_btn_click)
 
     @pyqtSlot()
-    def on_off_btn_click(self):
-        status = 'OFF'
-        if status == 'OFF':
+    def on_off_btn_click(self, state):
+        if state == Qt.Checked:
             # If the switch is OFF, turn it ON!
             api1 = 170
             api2 = 3
@@ -22,9 +21,8 @@ class App(QWidget):
             ctrl = 130
             bank = 0
             csum = 45
-            status = 'OFF'
 
-        elif status == 'ON':
+        else:
             # If the switch is ON, turn it OFF!
             api1 = 170
             api2 = 3
@@ -32,7 +30,6 @@ class App(QWidget):
             ctrl = 129
             bank = 0
             csum = 44
-            status = 'ON'
 
         tx = [api1, api2, api3, ctrl, bank, csum]
         print(tx)
