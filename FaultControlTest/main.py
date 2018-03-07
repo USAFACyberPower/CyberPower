@@ -24,9 +24,23 @@ def serial_transmit(tx):
 class App(QWidget):
     def __init__(self):
         super(App, self).__init__()
-        loadUi('FaultBankRelayCtrl.ui', self)
+        self.ui = loadUi('FaultBankRelayCtrl.ui', self)
         self.menu_btn_all_on.clicked.connect(self.menu_btn_all_on_clicked)
         self.menu_btn_reset.clicked.connect(self.menu_btn_reset_clicked)
+        # Start with the GUI main menu
+        self.ui.stackedWidget.setCurrentIndex(0)
+        # Bolted Fault menu functions
+        self.menu_btn_bolted.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
+        self.bolted_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        # Phase AB menu functions
+        self.menu_btn_phaseAB.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2))
+        self.phaseAB_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        # Phase AC menu functions
+        self.menu_btn_phaseAC.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(3))
+        self.phaseAC_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        # Phase BC menu functions
+        self.menu_btn_phaseBC.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(4))
+        self.phaseBC_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
 
     @pyqtSlot()
     def menu_btn_all_on_clicked(self):
