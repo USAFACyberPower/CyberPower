@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>698</width>
+    <height>498</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Bank &amp; Relay Control</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(46, 52, 54);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="1">
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="minimumSize">
+      <size>
+       <width>680</width>
+       <height>480</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>680</width>
+       <height>480</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="Menu">
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_menu">
+         <property name="spacing">
+          <number>36</number>
+         </property>
+         <item row="1" column="3">
+          <widget class="QPushButton" name="menu_btn_reset">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(238, 238, 236);
+background-color: rgb(78, 154, 6);</string>
+           </property>
+           <property name="text">
+            <string>MASTER RESET</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="menu_btn_phaseBC">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(0, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+           </property>
+           <property name="text">
+            <string>Phase Fault B/C</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QPushButton" name="menu_btn_phaseAC">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+           </property>
+           <property name="text">
+            <string>Phase Fault A/C</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="menu_btn_all_on">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(238, 238, 236);
+background-color: rgb(164, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>MASTER FAULT</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="menu_btn_phaseAB">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(0, 0, 0, 255));</string>
+           </property>
+           <property name="text">
+            <string>Phase Fault A/B</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="menu_btn_bolted">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:0.5 rgba(0, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+           </property>
+           <property name="text">
+            <string>Bolted Fault</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Bolted">
+      <property name="minimumSize">
+       <size>
+        <width>680</width>
+        <height>480</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>680</width>
+        <height>480</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>681</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_bolted">
+        <property name="spacing">
+         <number>36</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="bolted_btn_relay1">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:0.5 rgba(0, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Bolted Fault - Relay 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="bolted_btn_relay2">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:0.5 rgba(0, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Bolted Fault - Relay 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="bolted_btn_relay8">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:0.5 rgba(0, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Bolted Fault - Relay 8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="bolted_btn_relay6">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:0.5 rgba(0, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Bolted Fault - Relay 6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="bolted_btn_relay5">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:0.5 rgba(0, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Bolted Fault - Relay 5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="bolted_btn_relay7">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:0.5 rgba(0, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Bolted Fault - Relay 7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="bolted_btn_relay4">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:0.5 rgba(0, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Bolted Fault - Relay 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="bolted_btn_relay3">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:0.5 rgba(0, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Bolted Fault - Relay 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="bolted_btn_menu">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+          </property>
+          <property name="text">
+           <string>MENU</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="bolted_btn_reset">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(78, 154, 6);
+color: rgb(238, 238, 236);</string>
+          </property>
+          <property name="text">
+           <string>RESET</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="PhaseAB">
+      <property name="minimumSize">
+       <size>
+        <width>680</width>
+        <height>480</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>680</width>
+        <height>480</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>681</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_AB">
+        <property name="spacing">
+         <number>36</number>
+        </property>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="phaseAB_btn_relay2">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(0, 0, 0, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/B Fault - Relay 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="phaseAB_btn_relay5">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(0, 0, 0, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/B Fault - Relay 5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="phaseAB_btn_relay4">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(0, 0, 0, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/B Fault - Relay 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="phaseAB_btn_relay6">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(0, 0, 0, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/B Fault - Relay 6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="phaseAB_btn_relay1">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(0, 0, 0, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/B Fault - Relay 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="phaseAB_btn_relay3">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(0, 0, 0, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/B Fault - Relay 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="phaseAB_btn_relay8">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(0, 0, 0, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/B Fault - Relay 8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="phaseAB_btn_relay7">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(164, 0, 0, 255), stop:0.75 rgba(0, 0, 0, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/B Fault - Relay 7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="phaseAB_btn_menu">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+          </property>
+          <property name="text">
+           <string>MENU</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="phaseAB_btn_reset">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: rgb(78, 154, 6);</string>
+          </property>
+          <property name="text">
+           <string>RESET</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="PhaseAC">
+      <property name="minimumSize">
+       <size>
+        <width>680</width>
+        <height>480</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>680</width>
+        <height>480</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>681</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_AC">
+        <property name="spacing">
+         <number>36</number>
+        </property>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="phaseAC_btn_relay7">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/C Fault - Relay 7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="phaseAC_btn_relay2">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/C Fault - Relay 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="phaseAC_btn_relay1">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/C Fault - Relay 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="phaseAC_btn_relay6">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/C Fault - Relay 6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="phaseAC_btn_relay4">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/C Fault - Relay 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="phaseAC_btn_relay5">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/C Fault - Relay 5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="phaseAC_btn_relay8">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/C Fault - Relay 8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="phaseAC_btn_relay3">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(164, 0, 0, 255), stop:1 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase A/C Fault - Relay 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="phaseAC_btn_menu">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+          </property>
+          <property name="text">
+           <string>MENU</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="phaseAC_btn_reset">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: rgb(78, 154, 6);</string>
+          </property>
+          <property name="text">
+           <string>RESET</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="PhaseBC">
+      <property name="minimumSize">
+       <size>
+        <width>680</width>
+        <height>480</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>680</width>
+        <height>480</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-1</y>
+         <width>681</width>
+         <height>481</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="spacing">
+         <number>36</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="phaseBC_btn_relay5">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(0, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase B/C - Relay 5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="phaseBC_btn_relay1">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(0, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase B/C - Relay 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="phaseBC_btn_relay6">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(0, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase B/C - Relay 6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="phaseBC_btn_relay7">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(0, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase B/C - Relay 7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="phaseBC_btn_relay8">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(0, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase B/C - Relay 8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="phaseBC_btn_relay4">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(0, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase B/C - Relay 4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="phaseBC_btn_relay3">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(0, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase B/C - Relay 3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="phaseBC_btn_relay2">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.25 rgba(0, 0, 0, 255), stop:0.75 rgba(32, 74, 135, 255));</string>
+          </property>
+          <property name="text">
+           <string>Phase B/C - Relay 2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="phaseBC_btn_menu">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: rgb(85, 87, 83);</string>
+          </property>
+          <property name="text">
+           <string>MENU</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="phaseBC_btn_reset">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);
+background-color: rgb(78, 154, 6);</string>
+          </property>
+          <property name="text">
+           <string>RESET</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
