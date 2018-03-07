@@ -25,22 +25,31 @@ class App(QWidget):
     def __init__(self):
         super(App, self).__init__()
         self.ui = loadUi('FaultBankRelayCtrl.ui', self)
-        self.menu_btn_all_on.clicked.connect(self.menu_btn_all_on_clicked)
-        self.menu_btn_reset.clicked.connect(self.menu_btn_reset_clicked)
-        # Start with the GUI main menu
+
+        # GUI main menu
         self.ui.stackedWidget.setCurrentIndex(0)
+        # Master Fault Button
+        self.menu_btn_all_on.clicked.connect(self.menu_btn_all_on_clicked)
+        # Master Reset Button
+        self.menu_btn_reset.clicked.connect(self.menu_btn_reset_clicked)
+
         # Bolted Fault menu functions
         self.menu_btn_bolted.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
         self.bolted_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        self.bolted_btn_relay1.clicked.connect(self.bolted_btn_relay1_clicked)
+
         # Phase AB menu functions
         self.menu_btn_phaseAB.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2))
         self.phaseAB_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+
         # Phase AC menu functions
         self.menu_btn_phaseAC.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(3))
         self.phaseAC_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+
         # Phase BC menu functions
         self.menu_btn_phaseBC.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(4))
         self.phaseBC_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+
 
     @pyqtSlot()
     def menu_btn_all_on_clicked(self):
@@ -60,6 +69,27 @@ class App(QWidget):
         ctrl = 129
         bank = 0
         csum = 44
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+    def bolted_btn_relay1_clicked(self):
+        # Turn on relay 1 for all banks
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 108
+        bank = 0
+        csum = 23
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+        # Turn off relay 1 for bank 2
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 100
+        bank = 2
+        csum = 17
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
