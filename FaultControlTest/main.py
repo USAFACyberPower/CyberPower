@@ -36,19 +36,30 @@ class App(QWidget):
         # Bolted Fault menu functions
         self.menu_btn_bolted.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
         self.bolted_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        self.bolted_btn_reset.clicked.connect(self.menu_btn_reset_clicked)
         self.bolted_btn_relay1.clicked.connect(self.bolted_btn_relay1_clicked)
+        self.bolted_btn_relay2.clicked.connect(self.bolted_btn_relay2_clicked)
+        self.bolted_btn_relay3.clicked.connect(self.bolted_btn_relay3_clicked)
+        self.bolted_btn_relay4.clicked.connect(self.bolted_btn_relay4_clicked)
+        self.bolted_btn_relay5.clicked.connect(self.bolted_btn_relay5_clicked)
+        self.bolted_btn_relay6.clicked.connect(self.bolted_btn_relay6_clicked)
+        self.bolted_btn_relay7.clicked.connect(self.bolted_btn_relay7_clicked)
+        self.bolted_btn_relay8.clicked.connect(self.bolted_btn_relay8_clicked)
 
         # Phase AB menu functions
         self.menu_btn_phaseAB.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2))
         self.phaseAB_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        self.phaseAB_btn_reset.clicked.connect(self.menu_btn_reset_clicked)
 
         # Phase AC menu functions
         self.menu_btn_phaseAC.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(3))
         self.phaseAC_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        self.phaseAC_btn_reset.clicked.connect(self.menu_btn_reset_clicked)
 
         # Phase BC menu functions
         self.menu_btn_phaseBC.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(4))
         self.phaseBC_btn_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        self.phaseBC_btn_reset.clicked.connect(self.menu_btn_reset_clicked)
 
 
     @pyqtSlot()
@@ -73,7 +84,7 @@ class App(QWidget):
         serial_transmit(tx)
 
     def bolted_btn_relay1_clicked(self):
-        # Turn on relay 1 for all banks
+        # Turn on relay 1 for all banks (all phases and resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
@@ -83,13 +94,160 @@ class App(QWidget):
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
-        # Turn off relay 1 for bank 2
+        # Turn off relay 1 for bank 2 (resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
         ctrl = 100
         bank = 2
         csum = 17
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+    def bolted_btn_relay2_clicked(self):
+        # Turn on relay 2 for all banks (all phases and resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 109
+        bank = 0
+        csum = 24
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+        # Turn off relay 2 for bank 2 (resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 101
+        bank = 2
+        csum = 18
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+    def bolted_btn_relay3_clicked(self):
+        # Turn on relay 3 for all banks (all phases and resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 110
+        bank = 0
+        csum = 23
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+        # Turn off relay 3 for bank 2 (resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 102
+        bank = 2
+        csum = 19
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+    def bolted_btn_relay4_clicked(self):
+        # Turn on relay 4 for all banks (all phases and resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 111
+        bank = 0
+        csum = 24
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+        # Turn off relay 4 for bank 2 (resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 103
+        bank = 2
+        csum = 20
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+    def bolted_btn_relay5_clicked(self):
+        # Turn on relay 5 for all banks (all phases and resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 112
+        bank = 0
+        csum = 25
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+        # Turn off relay 5 for bank 2 (resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 104
+        bank = 2
+        csum = 21
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+    def bolted_btn_relay6_clicked(self):
+        # Turn on relay 6 for all banks (all phases and resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 113
+        bank = 0
+        csum = 26
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+        # Turn off relay 6 for bank 2 (resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 105
+        bank = 2
+        csum = 22
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+    def bolted_btn_relay7_clicked(self):
+        # Turn on relay 7 for all banks (all phases and resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 114
+        bank = 0
+        csum = 27
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+        # Turn off relay 7 for bank 2 (resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 106
+        bank = 2
+        csum = 23
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+    def bolted_btn_relay8_clicked(self):
+        # Turn on relay 8 for all banks (all phases and resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 115
+        bank = 0
+        csum = 28
+        tx = [api1, api2, api3, ctrl, bank, csum]
+        serial_transmit(tx)
+
+        # Turn off relay 8 for bank 2 (resistor bank)
+        api1 = 170
+        api2 = 3
+        api3 = 254
+        ctrl = 107
+        bank = 2
+        csum = 24
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
