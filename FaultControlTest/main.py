@@ -94,13 +94,13 @@ class App(QWidget):
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
-        # Turn off relay 1 for bank 2 (resistor bank)
+        # Turn off all relays for bank 2 (resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
-        ctrl = 100
+        ctrl = 129
         bank = 2
-        csum = 17
+        csum = 46
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
@@ -115,13 +115,13 @@ class App(QWidget):
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
-        # Turn off relay 2 for bank 2 (resistor bank)
+        # Turn off all relays for bank 2 (resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
-        ctrl = 101
+        ctrl = 129
         bank = 2
-        csum = 18
+        csum = 46
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
@@ -136,13 +136,13 @@ class App(QWidget):
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
-        # Turn off relay 3 for bank 2 (resistor bank)
+        # Turn off all relays for bank 2 (resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
-        ctrl = 102
+        ctrl = 129
         bank = 2
-        csum = 19
+        csum = 46
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
@@ -157,13 +157,13 @@ class App(QWidget):
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
-        # Turn off relay 4 for bank 2 (resistor bank)
+        # Turn off all relays for bank 2 (resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
-        ctrl = 103
+        ctrl = 129
         bank = 2
-        csum = 20
+        csum = 46
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
@@ -178,13 +178,13 @@ class App(QWidget):
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
-        # Turn off relay 5 for bank 2 (resistor bank)
+        # Turn off all relays for bank 2 (resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
-        ctrl = 104
+        ctrl = 129
         bank = 2
-        csum = 21
+        csum = 46
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
@@ -199,13 +199,13 @@ class App(QWidget):
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
-        # Turn off relay 6 for bank 2 (resistor bank)
+        # Turn off all relays for bank 2 (resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
-        ctrl = 105
+        ctrl = 129
         bank = 2
-        csum = 22
+        csum = 46
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
@@ -220,13 +220,13 @@ class App(QWidget):
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
-        # Turn off relay 7 for bank 2 (resistor bank)
+        # Turn off all relays for bank 2 (resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
-        ctrl = 106
+        ctrl = 129
         bank = 2
-        csum = 23
+        csum = 46
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
@@ -241,13 +241,13 @@ class App(QWidget):
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
-        # Turn off relay 8 for bank 2 (resistor bank)
+        # Turn off all relays for bank 2 (resistor bank)
         api1 = 170
         api2 = 3
         api3 = 254
-        ctrl = 107
+        ctrl = 129
         bank = 2
-        csum = 24
+        csum = 46
         tx = [api1, api2, api3, ctrl, bank, csum]
         serial_transmit(tx)
 
