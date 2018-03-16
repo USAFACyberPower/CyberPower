@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="HMIbackground">
+    <file>FaultLoc1.png</file>
+    <file>FaultLoc2.png</file>
+    <file>FaultLoc3.png</file>
+    <file>FaultLoc4.png</file>
+    <file>FaultLoc5.png</file>
+    <file>Faultimage.png</file>
+    <file>FaultLoc6.png</file>
+    <file>HMIbackground.png</file>
+  </qresource>
+</RCC>
