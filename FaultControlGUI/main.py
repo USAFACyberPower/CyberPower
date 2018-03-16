@@ -66,6 +66,26 @@ class App(QWidget):
         self.btn_OneLine_loc2TL5.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2))
         self.btn_loc2_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
         self.btn_loc2_reset.clicked.connect(self.btn_reset_clicked)
+        # Fault Location 2 - A Phase Resistive Faults
+        self.btn_loc2_A200.clicked.connect(self.btn_loc2_A200_clicked)
+        self.btn_loc2_A100.clicked.connect(self.btn_loc2_A100_clicked)
+        self.btn_loc2_A67.clicked.connect(self.btn_loc2_A67_clicked)
+        self.btn_loc2_A50.clicked.connect(self.btn_loc2_A50_clicked)
+        # Fault Location 2 - B Phase Resistive Faults
+        self.btn_loc2_B200.clicked.connect(self.btn_loc2_B200_clicked)
+        self.btn_loc2_B100.clicked.connect(self.btn_loc2_B100_clicked)
+        self.btn_loc2_B67.clicked.connect(self.btn_loc2_B67_clicked)
+        self.btn_loc2_B50.clicked.connect(self.btn_loc2_B50_clicked)
+        # Fault Location 2 - C Phase Resistive Faults
+        self.btn_loc2_C200.clicked.connect(self.btn_loc2_C200_clicked)
+        self.btn_loc2_C100.clicked.connect(self.btn_loc2_C100_clicked)
+        self.btn_loc2_C67.clicked.connect(self.btn_loc2_C67_clicked)
+        self.btn_loc2_C50.clicked.connect(self.btn_loc2_C50_clicked)
+        # Fault Location 2 - Multi-Phase Faults
+        self.btn_loc2_AB.clicked.connect(self.btn_loc2_AB_clicked)
+        self.btn_loc2_AC.clicked.connect(self.btn_loc2_AC_clicked)
+        self.btn_loc2_BC.clicked.connect(self.btn_loc2_BC_clicked)
+        self.btn_loc2_bolt.clicked.connect(self.btn_loc2_bolt_clicked)
 
         # Fault Location 3 - Menu Functions
         self.btn_OneLine_loc3TL4.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(3))
@@ -268,6 +288,179 @@ class App(QWidget):
         tx = [170, 3, 254, 108, 4, 27]
         serial_transmit(tx)
 # END LOCATION 1 FAULT DEFINITIONS
+
+# BEGIN LOCATION 2 FAULT DEFINITIONS
+    # Fault Location 2 - A Phase Resistive Faults
+    def btn_loc2_A200_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 1, 25]
+        serial_transmit(tx)
+
+    def btn_loc2_A100_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 109, 2, 26]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 1, 25]
+        serial_transmit(tx)
+
+    def btn_loc2_A67_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 109, 2, 26]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 110, 2, 27]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 1, 25]
+        serial_transmit(tx)
+
+    def btn_loc2_A50_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 109, 2, 26]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 110, 2, 27]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 111, 2, 28]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 1, 25]
+        serial_transmit(tx)
+
+    # Fault Location 2 - B Phase Resistive Faults
+    def btn_loc2_B200_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 3, 27]
+        serial_transmit(tx)
+
+    def btn_loc2_B100_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 109, 2, 26]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 3, 27]
+        serial_transmit(tx)
+
+    def btn_loc2_B67_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 109, 2, 26]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 110, 2, 27]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 3, 27]
+        serial_transmit(tx)
+
+    def btn_loc2_B50_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 109, 2, 26]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 110, 2, 27]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 111, 2, 28]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 3, 27]
+        serial_transmit(tx)
+
+    # Fault Location 2 - C Phase Resistive Faults
+    def btn_loc2_C200_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 4, 28]
+        serial_transmit(tx)
+
+    def btn_loc2_C100_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 109, 2, 26]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 4, 28]
+        serial_transmit(tx)
+
+    def btn_loc2_C67_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 109, 2, 26]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 110, 2, 27]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 4, 28]
+        serial_transmit(tx)
+
+    def btn_loc2_C50_clicked(self):
+        # Prep Resistor Bank
+        tx = [170, 3, 254, 108, 2, 25]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 109, 2, 26]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 110, 2, 27]
+        serial_transmit(tx)
+        tx = [170, 3, 254, 111, 2, 28]
+        serial_transmit(tx)
+        # Close Phase Switch
+        tx = [170, 3, 254, 109, 4, 28]
+        serial_transmit(tx)
+
+    # Fault Location 2 - Multi-Phase Faults
+    def btn_loc2_AB_clicked(self):
+        # Phase A
+        tx = [170, 3, 254, 109, 1, 25]
+        serial_transmit(tx)
+        # Phase B
+        tx = [170, 3, 254, 109, 3, 27]
+        serial_transmit(tx)
+
+    def btn_loc2_AC_clicked(self):
+        # Phase A
+        tx = [170, 3, 254, 109, 1, 25]
+        serial_transmit(tx)
+        # Phase C
+        tx = [170, 3, 254, 109, 4, 28]
+        serial_transmit(tx)
+
+    def btn_loc2_BC_clicked(self):
+        # Phase B
+        tx = [170, 3, 254, 109, 3, 27]
+        serial_transmit(tx)
+        # Phase C
+        tx = [170, 3, 254, 109, 4, 28]
+        serial_transmit(tx)
+
+    def btn_loc2_bolt_clicked(self):
+        # Phase A
+        tx = [170, 3, 254, 109, 1, 25]
+        serial_transmit(tx)
+        # Phase B
+        tx = [170, 3, 254, 109, 3, 27]
+        serial_transmit(tx)
+        # Phase C
+        tx = [170, 3, 254, 109, 4, 28]
+        serial_transmit(tx)
+# END LOCATION 2 FAULT DEFINITIONS
 
 
 app = QApplication(sys.argv)
