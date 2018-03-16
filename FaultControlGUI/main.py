@@ -1,5 +1,6 @@
 import sys
 import serial
+import resource
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.uic import loadUi
@@ -47,22 +48,22 @@ class App(QWidget):
         self.btn_loc2_reset.clicked.connect(self.btn_reset_clicked)
 
         # Fault Location 3 Functions
-        self.btn_OneLine_loc1TL1.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(3))
+        self.btn_OneLine_loc3TL4.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(3))
         self.btn_loc3_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
         self.btn_loc3_reset.clicked.connect(self.btn_reset_clicked)
 
         # Fault Location 4 Functions
-        self.btn_OneLine_loc2TL5.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(4))
+        self.btn_OneLine_loc4TL7.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(4))
         self.btn_loc4_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
         self.btn_loc4_reset.clicked.connect(self.btn_reset_clicked)
 
         # Fault Location 5 Functions
-        self.btn_OneLine_loc1TL1.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(5))
+        self.btn_OneLine_loc5TL9.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(5))
         self.btn_loc5_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
         self.btn_loc5_reset.clicked.connect(self.btn_reset_clicked)
 
         # Fault Location 6 Functions
-        self.btn_OneLine_loc2TL5.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(6))
+        self.btn_OneLine_loc6TL6.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(6))
         self.btn_loc6_menu.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
         self.btn_loc6_reset.clicked.connect(self.btn_reset_clicked)
 
