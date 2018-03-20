@@ -940,7 +940,7 @@ class App(QWidget):
         tx = [170, 3, 254, 108, 2, 25]
         serial_transmit(tx)
         # Close Phase Switch
-        tx = [170, 3, 254, 112, 3, 29]
+        tx = [170, 3, 254, 112, 3, 30]
         serial_transmit(tx)
 
     def btn_loc5_B100_clicked(self):
@@ -950,7 +950,7 @@ class App(QWidget):
         tx = [170, 3, 254, 109, 2, 26]
         serial_transmit(tx)
         # Close Phase Switch
-        tx = [170, 3, 254, 112, 3, 29]
+        tx = [170, 3, 254, 112, 3, 30]
         serial_transmit(tx)
 
     def btn_loc5_B67_clicked(self):
@@ -962,7 +962,7 @@ class App(QWidget):
         tx = [170, 3, 254, 110, 2, 27]
         serial_transmit(tx)
         # Close Phase Switch
-        tx = [170, 3, 254, 112, 3, 29]
+        tx = [170, 3, 254, 112, 3, 30]
         serial_transmit(tx)
 
     def btn_loc5_B50_clicked(self):
@@ -976,7 +976,7 @@ class App(QWidget):
         tx = [170, 3, 254, 111, 2, 28]
         serial_transmit(tx)
         # Close Phase Switch
-        tx = [170, 3, 254, 112, 3, 29]
+        tx = [170, 3, 254, 112, 3, 30]
         serial_transmit(tx)
 
     # Fault Location5 - C Phase Resistive Faults
@@ -1030,7 +1030,7 @@ class App(QWidget):
         tx = [170, 3, 254, 112, 1, 28]
         serial_transmit(tx)
         # Phase B
-        tx = [170, 3, 254, 112, 3, 29]
+        tx = [170, 3, 254, 112, 3, 30]
         serial_transmit(tx)
 
     def btn_loc5_AC_clicked(self):
@@ -1043,7 +1043,7 @@ class App(QWidget):
 
     def btn_loc5_BC_clicked(self):
         # Phase B
-        tx = [170, 3, 254, 112, 3, 29]
+        tx = [170, 3, 254, 112, 3, 30]
         serial_transmit(tx)
         # Phase C
         tx = [170, 3, 254, 112, 4, 31]
@@ -1054,7 +1054,7 @@ class App(QWidget):
         tx = [170, 3, 254, 112, 1, 28]
         serial_transmit(tx)
         # Phase B
-        tx = [170, 3, 254, 112, 3, 29]
+        tx = [170, 3, 254, 112, 3, 30]
         serial_transmit(tx)
         # Phase C
         tx = [170, 3, 254, 112, 4, 31]
@@ -1113,7 +1113,7 @@ class App(QWidget):
         tx = [170, 3, 254, 108, 2, 25]
         serial_transmit(tx)
         # Close Phase Switch
-        tx = [170, 3, 254, 113, 3, 30]
+        tx = [170, 3, 254, 113, 3, 31]
         serial_transmit(tx)
 
     def btn_loc6_B100_clicked(self):
@@ -1123,7 +1123,7 @@ class App(QWidget):
         tx = [170, 3, 254, 109, 2, 26]
         serial_transmit(tx)
         # Close Phase Switch
-        tx = [170, 3, 254, 113, 3, 30]
+        tx = [170, 3, 254, 113, 3, 31]
         serial_transmit(tx)
 
     def btn_loc6_B67_clicked(self):
@@ -1135,7 +1135,7 @@ class App(QWidget):
         tx = [170, 3, 254, 110, 2, 27]
         serial_transmit(tx)
         # Close Phase Switch
-        tx = [170, 3, 254, 113, 3, 30]
+        tx = [170, 3, 254, 113, 3, 31]
         serial_transmit(tx)
 
     def btn_loc6_B50_clicked(self):
@@ -1149,7 +1149,7 @@ class App(QWidget):
         tx = [170, 3, 254, 111, 2, 28]
         serial_transmit(tx)
         # Close Phase Switch
-        tx = [170, 3, 254, 113, 3, 30]
+        tx = [170, 3, 254, 113, 3, 31]
         serial_transmit(tx)
 
     # Fault Location5 - C Phase Resistive Faults
@@ -1203,7 +1203,7 @@ class App(QWidget):
         tx = [170, 3, 254, 113, 1, 29]
         serial_transmit(tx)
         # Phase B
-        tx = [170, 3, 254, 113, 3, 30]
+        tx = [170, 3, 254, 113, 3, 31]
         serial_transmit(tx)
 
     def btn_loc6_AC_clicked(self):
@@ -1216,7 +1216,7 @@ class App(QWidget):
 
     def btn_loc6_BC_clicked(self):
         # Phase B
-        tx = [170, 3, 254, 113, 3, 30]
+        tx = [170, 3, 254, 113, 3, 31]
         serial_transmit(tx)
         # Phase C
         tx = [170, 3, 254, 113, 4, 32]
@@ -1227,7 +1227,7 @@ class App(QWidget):
         tx = [170, 3, 254, 113, 1, 29]
         serial_transmit(tx)
         # Phase B
-        tx = [170, 3, 254, 113, 3, 30]
+        tx = [170, 3, 254, 113, 3, 31]
         serial_transmit(tx)
         # Phase C
         tx = [170, 3, 254, 113, 4, 32]
