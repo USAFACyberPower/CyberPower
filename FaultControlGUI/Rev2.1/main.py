@@ -282,7 +282,7 @@ class App(QWidget):
 
     def btn_GRND_clicked(self):
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
 # END MAIN MENU DEFINITIONS
@@ -338,7 +338,7 @@ class App(QWidget):
         tx = [170, 3, 254, 108, 1, 24]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 1 - B Phase Resistive Faults
@@ -391,7 +391,7 @@ class App(QWidget):
         tx = [170, 3, 254, 108, 3, 26]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 1 - C Phase Resistive Faults
@@ -444,7 +444,7 @@ class App(QWidget):
         tx = [170, 3, 254, 108, 4, 27]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 1 - Multi-Phase Faults
@@ -536,7 +536,7 @@ class App(QWidget):
         tx = [170, 3, 254, 109, 1, 25]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 2 - B Phase Resistive Faults
@@ -589,7 +589,7 @@ class App(QWidget):
         tx = [170, 3, 254, 109, 3, 27]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 2 - C Phase Resistive Faults
@@ -642,7 +642,7 @@ class App(QWidget):
         tx = [170, 3, 254, 109, 4, 28]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 2 - Multi-Phase Faults
@@ -734,7 +734,7 @@ class App(QWidget):
         tx = [170, 3, 254, 110, 1, 26]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 3 - B Phase Resistive Faults
@@ -787,7 +787,7 @@ class App(QWidget):
         tx = [170, 3, 254, 110, 3, 28]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 3 - C Phase Resistive Faults
@@ -840,7 +840,7 @@ class App(QWidget):
         tx = [170, 3, 254, 110, 4, 29]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 3 - Multi-Phase Faults
@@ -932,7 +932,7 @@ class App(QWidget):
         tx = [170, 3, 254, 111, 1, 27]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 4 - B Phase Resistive Faults
@@ -985,7 +985,7 @@ class App(QWidget):
         tx = [170, 3, 254, 111, 3, 29]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 4 - C Phase Resistive Faults
@@ -1038,7 +1038,7 @@ class App(QWidget):
         tx = [170, 3, 254, 111, 4, 30]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 4 - Multi-Phase Faults
@@ -1130,7 +1130,7 @@ class App(QWidget):
         tx = [170, 3, 254, 112, 1, 28]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 5 - B Phase Resistive Faults
@@ -1183,7 +1183,7 @@ class App(QWidget):
         tx = [170, 3, 254, 112, 3, 30]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location5 - C Phase Resistive Faults
@@ -1236,7 +1236,7 @@ class App(QWidget):
         tx = [170, 3, 254, 112, 4, 31]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location5 - Multi-Phase Faults
@@ -1328,7 +1328,7 @@ class App(QWidget):
         tx = [170, 3, 254, 113, 1, 29]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location 6 - B Phase Resistive Faults
@@ -1381,7 +1381,7 @@ class App(QWidget):
         tx = [170, 3, 254, 113, 3, 31]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location5 - C Phase Resistive Faults
@@ -1434,7 +1434,7 @@ class App(QWidget):
         tx = [170, 3, 254, 113, 4, 32]
         serial_transmit(tx)
         # Ground Enable
-        tx = [170, 3, 254, 108, 2, 25]
+        tx = [170, 3, 254, 112, 2, 29]
         serial_transmit(tx)
 
     # Fault Location5 - Multi-Phase Faults
