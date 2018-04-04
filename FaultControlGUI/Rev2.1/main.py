@@ -1,15 +1,17 @@
 import sys
 import serial
 import resource
+import time
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.uic import loadUi
 
 
 def serial_transmit(tx):
-    # Print the opcode for transmission verification
+    # Uncomment the print(tx) command for transmission verification
     # tx = [api1, api2, api3, ctrl, bank, csum]
-    print(tx)
+    # print(tx)
+
     # Establish USB Virtual Serial Connection
     ser = serial.Serial(
         port='/dev/ttyUSB0',
@@ -19,6 +21,8 @@ def serial_transmit(tx):
         stopbits=serial.STOPBITS_ONE,
         timeout=1
     )
+    # Uncomment the time.sleep(secs) command for wireless buffer correction
+    time.sleep(0.5)
     # Send OPCODE Serial Bits (TX) to Relay Board.
     ser.write(serial.to_bytes(tx))
 
