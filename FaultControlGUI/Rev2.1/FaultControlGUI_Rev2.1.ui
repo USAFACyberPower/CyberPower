@@ -38,7 +38,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>6</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="OneLine">
       <widget class="QTextBrowser" name="textBrowser_OneLine">
@@ -283,7 +283,7 @@ background-color: rgba(255, 255, 255, 0);</string>
           <item row="2" column="0">
            <widget class="QStackedWidget" name="stackedWidget_Loc1">
             <property name="currentIndex">
-             <number>0</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="Loc1_PhaseA">
              <widget class="QWidget" name="gridLayoutWidget">
