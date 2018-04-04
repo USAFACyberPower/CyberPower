@@ -38,7 +38,7 @@
       </size>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>6</number>
      </property>
      <widget class="QWidget" name="OneLine">
       <widget class="QTextBrowser" name="textBrowser_OneLine">
@@ -1190,7 +1190,7 @@ color: rgb(238, 238, 236);</string>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>300</height>
+              <height>325</height>
              </size>
             </property>
             <property name="html">
@@ -1306,7 +1306,7 @@ color: rgb(238, 238, 236);</string>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>300</height>
+              <height>325</height>
              </size>
             </property>
             <property name="html">
@@ -2268,7 +2268,7 @@ color: rgb(238, 238, 236);</string>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>300</height>
+              <height>325</height>
              </size>
             </property>
             <property name="html">
@@ -3230,7 +3230,7 @@ color: rgb(238, 238, 236);</string>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>300</height>
+              <height>325</height>
              </size>
             </property>
             <property name="html">
@@ -4192,7 +4192,7 @@ color: rgb(238, 238, 236);</string>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>308</height>
+              <height>325</height>
              </size>
             </property>
             <property name="html">
