@@ -38,7 +38,7 @@
    <item row="1" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="balanced">
       <widget class="QWidget" name="gridLayoutWidget">
@@ -228,7 +228,10 @@ p, li { white-space: pre-wrap; }
            <string notr="true">selection-background-color: rgb(206, 92, 0);</string>
           </property>
           <property name="maximum">
-           <number>30</number>
+           <number>31</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
           </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -423,6 +426,9 @@ p, li { white-space: pre-wrap; }
             <height>40</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);</string>
+          </property>
          </widget>
         </item>
         <item row="0" column="3" alignment="Qt::AlignHCenter">
@@ -511,6 +517,9 @@ p, li { white-space: pre-wrap; }
             <height>40</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);</string>
+          </property>
          </widget>
         </item>
         <item row="1" column="1">
@@ -526,6 +535,9 @@ p, li { white-space: pre-wrap; }
             <width>80</width>
             <height>40</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);</string>
           </property>
          </widget>
         </item>
@@ -568,6 +580,9 @@ p, li { white-space: pre-wrap; }
             <width>80</width>
             <height>40</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);</string>
           </property>
          </widget>
         </item>
@@ -631,6 +646,9 @@ p, li { white-space: pre-wrap; }
             <height>40</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);</string>
+          </property>
          </widget>
         </item>
         <item row="2" column="4" alignment="Qt::AlignLeft">
@@ -646,6 +664,9 @@ p, li { white-space: pre-wrap; }
             <width>80</width>
             <height>40</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(238, 238, 236);</string>
           </property>
          </widget>
         </item>
@@ -686,10 +707,13 @@ p, li { white-space: pre-wrap; }
            <string notr="true">selection-background-color: rgb(164, 0, 0);</string>
           </property>
           <property name="minimum">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="maximum">
-           <number>30</number>
+           <number>31</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
           </property>
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -713,10 +737,13 @@ p, li { white-space: pre-wrap; }
            <string notr="true">selection-background-color: rgb(0, 0, 0);</string>
           </property>
           <property name="minimum">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="maximum">
-           <number>30</number>
+           <number>31</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
           </property>
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -740,10 +767,13 @@ p, li { white-space: pre-wrap; }
            <string notr="true">selection-background-color: rgb(32, 74, 135);</string>
           </property>
           <property name="minimum">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="maximum">
-           <number>30</number>
+           <number>31</number>
+          </property>
+          <property name="pageStep">
+           <number>1</number>
           </property>
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -897,8 +927,6 @@ background-color: rgb(164, 0, 0);</string>
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="../FaultControlGUI/Rev2.1/resource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
