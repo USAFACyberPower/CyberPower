@@ -496,32 +496,50 @@ class App(QWidget):
         if balancedSlider == '0':
             tx = [170, 3, 254, 129, 0, 44]
             serial_transmit(tx)
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
         elif balancedSlider == '1':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '2':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 111, 0, 26]
             serial_transmit(tx)
         elif balancedSlider == '3':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
             serial_transmit(tx)
         elif balancedSlider == '4':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 111, 0, 26]
             serial_transmit(tx)
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '5':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
             serial_transmit(tx)
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '6':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '7':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
             serial_transmit(tx)
         elif balancedSlider == '8':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
             serial_transmit(tx)
             tx = [170, 3, 254, 111, 0, 26]
@@ -529,21 +547,29 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '9':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
             serial_transmit(tx)
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '10':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
             serial_transmit(tx)
             tx = [170, 3, 254, 111, 0, 26]
             serial_transmit(tx)
         elif balancedSlider == '11':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
             serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
             serial_transmit(tx)
         elif balancedSlider == '12':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
             serial_transmit(tx)
             tx = [170, 3, 254, 111, 0, 26]
@@ -551,6 +577,8 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '13':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
             serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
@@ -558,6 +586,8 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '14':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
             serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
@@ -565,9 +595,13 @@ class App(QWidget):
             tx = [170, 3, 254, 111, 0, 26]
             serial_transmit(tx)
         elif balancedSlider == '15':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
         elif balancedSlider == '16':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
             serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
@@ -577,21 +611,29 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '17':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '18':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 111, 0, 26]
             serial_transmit(tx)
         elif balancedSlider == '19':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
             serial_transmit(tx)
         elif balancedSlider == '20':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 111, 0, 26]
@@ -599,6 +641,8 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '21':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
@@ -606,6 +650,8 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '22':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
@@ -613,11 +659,15 @@ class App(QWidget):
             tx = [170, 3, 254, 111, 0, 26]
             serial_transmit(tx)
         elif balancedSlider == '23':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
             serial_transmit(tx)
         elif balancedSlider == '24':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 110, 0, 25]
@@ -627,6 +677,8 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '25':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
@@ -634,6 +686,8 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '26':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
@@ -641,6 +695,8 @@ class App(QWidget):
             tx = [170, 3, 254, 111, 0, 26]
             serial_transmit(tx)
         elif balancedSlider == '27':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
@@ -648,6 +704,8 @@ class App(QWidget):
             tx = [170, 3, 254, 110, 0, 25]
             serial_transmit(tx)
         elif balancedSlider == '28':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
@@ -657,6 +715,8 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '29':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
@@ -666,6 +726,8 @@ class App(QWidget):
             tx = [170, 3, 254, 112, 0, 27]
             serial_transmit(tx)
         elif balancedSlider == '30':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
@@ -675,6 +737,8 @@ class App(QWidget):
             tx = [170, 3, 254, 111, 0, 26]
             serial_transmit(tx)
         elif balancedSlider == '31':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
             tx = [170, 3, 254, 108, 0, 23]
             serial_transmit(tx)
             tx = [170, 3, 254, 109, 0, 24]
