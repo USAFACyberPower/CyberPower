@@ -170,8 +170,7 @@ class App(QWidget):
             self.lcdNumber_Watts.display(11.8)
             self.lcdNumber_Ohms.display(48.8)
         else:
-            self.lcdNumber_Watts.display('ERR')
-            self.lcdNumber_Ohms.display('ERR')
+            pass
         return balancedSlider
 # END BALANCED SLIDER/LED FUNCTIONS
 
@@ -277,8 +276,8 @@ class App(QWidget):
             self.lcdNumber_WattsA.display(11.8)
             self.lcdNumber_OhmsA.display(48.8)
         else:
-            self.lcdNumber_WattsA.display('ERR')
-            self.lcdNumber_OhmsA.display('ERR')
+            pass
+        return unbalancedSliderA
 
     # Phase B Slider/LED Functions
     def unbalancedLoadValueChangeB(self):
@@ -381,8 +380,8 @@ class App(QWidget):
             self.lcdNumber_WattsB.display(11.8)
             self.lcdNumber_OhmsB.display(48.8)
         else:
-            self.lcdNumber_WattsB.display('ERR')
-            self.lcdNumber_OhmsB.display('ERR')
+            pass
+        return unbalancedSliderB
 
     # Phase C Slider/LED Functions
     def unbalancedLoadValueChangeC(self):
@@ -485,83 +484,209 @@ class App(QWidget):
             self.lcdNumber_WattsC.display(11.8)
             self.lcdNumber_OhmsC.display(48.8)
         else:
-            self.lcdNumber_WattsC.display('ERR')
-            self.lcdNumber_OhmsC.display('ERR')
+            pass
+        return unbalancedSliderC
 # END UNBALANCED SLIDER/LED FUNCTIONS
 
 # BEGIN BALANCED LOAD ENABLE
     # Balanced Load Enable Functions
     def balancedLoadEnable(self):
-        sliderValue = self.balancedLoadValueChange()
-        print(sliderValue)
-        if sliderValue == '0':
-            tx = [170, 3, 254, 129, 0, 0]
-        elif sliderValue == '1':
-            tx = [170, 3, 254, 129, 0, 1]
-        elif sliderValue == '2':
-            tx = [170, 3, 254, 129, 0, 2]
-        elif sliderValue == '3':
-            tx = [170, 3, 254, 129, 0, 3]
-        elif sliderValue == '4':
-            tx = [170, 3, 254, 129, 0, 4]
-        elif sliderValue == '5':
-            tx = [170, 3, 254, 129, 0, 5]
-        elif sliderValue == '6':
-            tx = [170, 3, 254, 129, 0, 6]
-        elif sliderValue == '7':
-            tx = [170, 3, 254, 129, 0, 7]
-        elif sliderValue == '8':
-            tx = [170, 3, 254, 129, 0, 8]
-        elif sliderValue == '9':
-            tx = [170, 3, 254, 129, 0, 9]
-        elif sliderValue == '10':
-            tx = [170, 3, 254, 129, 0, 10]
-        elif sliderValue == '11':
-            tx = [170, 3, 254, 129, 0, 11]
-        elif sliderValue == '12':
-            tx = [170, 3, 254, 129, 0, 12]
-        elif sliderValue == '13':
-            tx = [170, 3, 254, 129, 0, 13]
-        elif sliderValue == '14':
-            tx = [170, 3, 254, 129, 0, 14]
-        elif sliderValue == '15':
-            tx = [170, 3, 254, 129, 0, 15]
-        elif sliderValue == '16':
-            tx = [170, 3, 254, 129, 0, 16]
-        elif sliderValue == '17':
-            tx = [170, 3, 254, 129, 0, 17]
-        elif sliderValue == '18':
-            tx = [170, 3, 254, 129, 0, 18]
-        elif sliderValue == '19':
-            tx = [170, 3, 254, 129, 0, 19]
-        elif sliderValue == '20':
-            tx = [170, 3, 254, 129, 0, 20]
-        elif sliderValue == '21':
-            tx = [170, 3, 254, 129, 0, 21]
-        elif sliderValue == '22':
-            tx = [170, 3, 254, 129, 0, 22]
-        elif sliderValue == '23':
-            tx = [170, 3, 254, 129, 0, 23]
-        elif sliderValue == '24':
-            tx = [170, 3, 254, 129, 0, 24]
-        elif sliderValue == '25':
-            tx = [170, 3, 254, 129, 0, 25]
-        elif sliderValue == '26':
-            tx = [170, 3, 254, 129, 0, 26]
-        elif sliderValue == '27':
-            tx = [170, 3, 254, 129, 0, 27]
-        elif sliderValue == '28':
-            tx = [170, 3, 254, 129, 0, 28]
-        elif sliderValue == '29':
-            tx = [170, 3, 254, 129, 0, 29]
-        elif sliderValue == '30':
-            tx = [170, 3, 254, 129, 0, 30]
-        elif sliderValue == '31':
-            tx = [170, 3, 254, 129, 0, 31]
+        balancedSlider = self.balancedLoadValueChange()
+        print(balancedSlider)
+        if balancedSlider == '0':
+            tx = [170, 3, 254, 129, 0, 44]
+            serial_transmit(tx)
+        elif balancedSlider == '1':
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '2':
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+        elif balancedSlider == '3':
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+        elif balancedSlider == '4':
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '5':
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '6':
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '7':
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+        elif balancedSlider == '8':
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '9':
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '10':
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+        elif balancedSlider == '11':
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+        elif balancedSlider == '12':
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '13':
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '14':
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+        elif balancedSlider == '15':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+        elif balancedSlider == '16':
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '17':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '18':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+        elif balancedSlider == '19':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+        elif balancedSlider == '20':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '21':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '22':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+        elif balancedSlider == '23':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+        elif balancedSlider == '24':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '25':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '26':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+        elif balancedSlider == '27':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+        elif balancedSlider == '28':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '29':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
+        elif balancedSlider == '30':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+        elif balancedSlider == '31':
+            tx = [170, 3, 254, 108, 0, 23]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 0, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 0, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 0, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 0, 27]
+            serial_transmit(tx)
         else:
             pass
-        print(tx)
-        # serial_transmit(tx)
 
 
 app = QApplication(sys.argv)
