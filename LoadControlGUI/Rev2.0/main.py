@@ -2,7 +2,7 @@ import sys
 import serial
 import time
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QApplication, QWidget, QSlider, QLineEdit, QLCDNumber
+from PyQt5.QtWidgets import QApplication, QWidget, QSlider, QLCDNumber
 from PyQt5.uic import loadUi
 
 
@@ -38,14 +38,16 @@ class App(QWidget):
         self.btn_loadResetB.clicked.connect(self.btn_reset_clicked)
         self.btn_loadResetU.clicked.connect(self.btn_reset_clicked)
 
-    # BALANCED LOAD SLIDER
+    # BALANCED LOAD
         # LED Indicator Setup for Watt and Ohm Displays
         self.lcdNumber_Watts.display(self.balancedLoadValueChange())
         self.lcdNumber_Ohms.display(self.balancedLoadValueChange())
         # Load Slider Setup for Watt and Ohm Displays
         self.horizontalSlider_loadSelecter.valueChanged.connect(self.balancedLoadValueChange)
+        # Load Enable
+        self.btn_loadEnableB.clicked.connect(self.balancedLoadEnable)
 
-    # UNBALANCED LOAD SLIDERS
+    # UNBALANCED LOAD
         # LED Indicator Setup for Watt and Ohm Displays
         self.lcdNumber_WattsA.display(self.unbalancedLoadValueChangeA())
         self.lcdNumber_OhmsA.display(self.unbalancedLoadValueChangeA())
@@ -57,7 +59,6 @@ class App(QWidget):
         self.verticalSlider_LoadA.valueChanged.connect(self.unbalancedLoadValueChangeA)
         self.verticalSlider_LoadB.valueChanged.connect(self.unbalancedLoadValueChangeB)
         self.verticalSlider_LoadC.valueChanged.connect(self.unbalancedLoadValueChangeC)
-
 
     @pyqtSlot()
 # BEGIN MAIN MENU DEFINITIONS
@@ -171,6 +172,7 @@ class App(QWidget):
         else:
             self.lcdNumber_Watts.display('ERR')
             self.lcdNumber_Ohms.display('ERR')
+        return balancedSlider
 # END BALANCED SLIDER/LED FUNCTIONS
 
 # BEGIN UNBALANCED SLIDER/LED FUNCTIONS
@@ -486,6 +488,80 @@ class App(QWidget):
             self.lcdNumber_WattsC.display('ERR')
             self.lcdNumber_OhmsC.display('ERR')
 # END UNBALANCED SLIDER/LED FUNCTIONS
+
+# BEGIN BALANCED LOAD ENABLE
+    # Balanced Load Enable Functions
+    def balancedLoadEnable(self):
+        sliderValue = self.balancedLoadValueChange()
+        print(sliderValue)
+        if sliderValue == '0':
+            tx = [170, 3, 254, 129, 0, 0]
+        elif sliderValue == '1':
+            tx = [170, 3, 254, 129, 0, 1]
+        elif sliderValue == '2':
+            tx = [170, 3, 254, 129, 0, 2]
+        elif sliderValue == '3':
+            tx = [170, 3, 254, 129, 0, 3]
+        elif sliderValue == '4':
+            tx = [170, 3, 254, 129, 0, 4]
+        elif sliderValue == '5':
+            tx = [170, 3, 254, 129, 0, 5]
+        elif sliderValue == '6':
+            tx = [170, 3, 254, 129, 0, 6]
+        elif sliderValue == '7':
+            tx = [170, 3, 254, 129, 0, 7]
+        elif sliderValue == '8':
+            tx = [170, 3, 254, 129, 0, 8]
+        elif sliderValue == '9':
+            tx = [170, 3, 254, 129, 0, 9]
+        elif sliderValue == '10':
+            tx = [170, 3, 254, 129, 0, 10]
+        elif sliderValue == '11':
+            tx = [170, 3, 254, 129, 0, 11]
+        elif sliderValue == '12':
+            tx = [170, 3, 254, 129, 0, 12]
+        elif sliderValue == '13':
+            tx = [170, 3, 254, 129, 0, 13]
+        elif sliderValue == '14':
+            tx = [170, 3, 254, 129, 0, 14]
+        elif sliderValue == '15':
+            tx = [170, 3, 254, 129, 0, 15]
+        elif sliderValue == '16':
+            tx = [170, 3, 254, 129, 0, 16]
+        elif sliderValue == '17':
+            tx = [170, 3, 254, 129, 0, 17]
+        elif sliderValue == '18':
+            tx = [170, 3, 254, 129, 0, 18]
+        elif sliderValue == '19':
+            tx = [170, 3, 254, 129, 0, 19]
+        elif sliderValue == '20':
+            tx = [170, 3, 254, 129, 0, 20]
+        elif sliderValue == '21':
+            tx = [170, 3, 254, 129, 0, 21]
+        elif sliderValue == '22':
+            tx = [170, 3, 254, 129, 0, 22]
+        elif sliderValue == '23':
+            tx = [170, 3, 254, 129, 0, 23]
+        elif sliderValue == '24':
+            tx = [170, 3, 254, 129, 0, 24]
+        elif sliderValue == '25':
+            tx = [170, 3, 254, 129, 0, 25]
+        elif sliderValue == '26':
+            tx = [170, 3, 254, 129, 0, 26]
+        elif sliderValue == '27':
+            tx = [170, 3, 254, 129, 0, 27]
+        elif sliderValue == '28':
+            tx = [170, 3, 254, 129, 0, 28]
+        elif sliderValue == '29':
+            tx = [170, 3, 254, 129, 0, 29]
+        elif sliderValue == '30':
+            tx = [170, 3, 254, 129, 0, 30]
+        elif sliderValue == '31':
+            tx = [170, 3, 254, 129, 0, 31]
+        else:
+            pass
+        print(tx)
+        # serial_transmit(tx)
 
 
 app = QApplication(sys.argv)
