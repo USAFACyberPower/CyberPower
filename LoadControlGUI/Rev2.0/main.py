@@ -59,6 +59,8 @@ class App(QWidget):
         self.verticalSlider_LoadA.valueChanged.connect(self.unbalancedLoadValueChangeA)
         self.verticalSlider_LoadB.valueChanged.connect(self.unbalancedLoadValueChangeB)
         self.verticalSlider_LoadC.valueChanged.connect(self.unbalancedLoadValueChangeC)
+        # Load Enable
+        self.btn_loadEnableU.clicked.connect(self.unbalancedLoadEnable)
 
     @pyqtSlot()
 # BEGIN MAIN MENU DEFINITIONS
@@ -751,6 +753,794 @@ class App(QWidget):
             serial_transmit(tx)
         else:
             pass
+# END BALANCED LOAD ENABLE
+
+# BEGIN UNBALANCED LOAD ENABLE
+    # Unbalanced A Load Enable Functions
+    def unbalancedLoadEnable(self):
+        unbalancedSliderA = str(self.verticalSlider_LoadA.value())
+        print(unbalancedSliderA)
+        if unbalancedSliderA == '0':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '1':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '2':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '3':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '4':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '5':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '6':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '7':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '8':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '9':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '10':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '11':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '12':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '13':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '14':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '15':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '16':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '17':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '18':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '19':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '20':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '21':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '22':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '23':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '24':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '25':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '26':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '27':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '28':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '29':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '30':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderA == '31':
+            tx = [170, 3, 254, 129, 1, 45]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 1, 24]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 1, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 1, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 1, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 1, 28]
+            serial_transmit(tx)
+        else:
+            pass
+    # Unbalanced B Load Enable Functions
+        unbalancedSliderB = str(self.verticalSlider_LoadB.value())
+        print(unbalancedSliderB)
+        if unbalancedSliderB == '0':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '1':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '2':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '3':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '4':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '5':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '6':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '7':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '8':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '9':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '10':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '11':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '12':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '13':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '14':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '15':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '16':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '17':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '18':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '19':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '20':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '21':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '22':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '23':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '24':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '25':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '26':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '27':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '28':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '29':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '30':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderB == '31':
+            tx = [170, 3, 254, 129, 2, 46]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 2, 25]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 2, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 2, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 2, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 2, 29]
+            serial_transmit(tx)
+        else:
+            pass
+    # Unbalanced C Load Enable Functions
+        unbalancedSliderC = str(self.verticalSlider_LoadC.value())
+        print(unbalancedSliderC)
+        if unbalancedSliderC == '0':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '1':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '2':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '3':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '4':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '5':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '6':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '7':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '8':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '9':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '10':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '11':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '12':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '13':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '14':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '15':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '16':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '17':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '18':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '19':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '20':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '21':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '22':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '23':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '24':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '25':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '26':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '27':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '28':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '29':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '30':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+        elif unbalancedSliderC == '31':
+            tx = [170, 3, 254, 129, 3, 47]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 108, 3, 26]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 109, 3, 27]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 110, 3, 28]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 111, 3, 29]
+            serial_transmit(tx)
+            tx = [170, 3, 254, 112, 3, 30]
+            serial_transmit(tx)
+        else:
+            pass
+# END UNBALANCED LOAD ENABLE
 
 
 app = QApplication(sys.argv)
