@@ -37,6 +37,8 @@ class App(QWidget):
         self.btn_Balanced.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
         self.btn_loadResetB.clicked.connect(self.btn_reset_clicked)
         self.btn_loadResetU.clicked.connect(self.btn_reset_clicked)
+        self.btn_loadGNDB.clicked.connect(self.btn_loadGND_clicked)
+        self.btn_loadGNDU.clicked.connect(self.btn_loadGND_clicked)
 
     # BALANCED LOAD
         # LED Indicator Setup for Watt and Ohm Displays
@@ -69,6 +71,12 @@ class App(QWidget):
         # Reset All
         tx = [170, 3, 254, 129, 0, 44]
         serial_transmit(tx)
+
+    # Ground Disable
+    def btn_loadGND_clicked(self):
+            tx = [170, 3, 254, 115, 3, 33]
+            serial_transmit(tx)
+
 # END MAIN MENU DEFINITIONS
 
 # BEGIN BALANCED SLIDER/LED FUNCTIONS
